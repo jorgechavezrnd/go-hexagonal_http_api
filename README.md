@@ -6,6 +6,8 @@
 - Cómo estructurar tus proyectos en Go: https://blog.friendsofgo.tech/posts/como_estructurar_tus_aplicaciones_go/
 - package-oriented-design: https://www.ardanlabs.com/blog/2017/02/package-oriented-design.html
 - Mockery: https://github.com/vektra/mockery
+- Testify: https://pkg.go.dev/github.com/stretchr/testify
+- Testify mock - AssertExpectations: https://pkg.go.dev/github.com/stretchr/testify@v1.7.0/mock#Mock.AssertExpectations
 
 ## Commands used for create the project
 - Initialize go mod: `go mod init github.com/jorgechavezrnd/go-hexagonal_http_api`
