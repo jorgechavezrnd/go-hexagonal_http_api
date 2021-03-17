@@ -2,6 +2,13 @@ package mooc
 
 import "context"
 
+// CourseRepository defines the expected behavior from a course storage.
+type CourseRepository interface {
+	Save(ctx context.Context, course Course) error
+}
+
+// go:generate mockery --case=snake --outpkg=storagemocks --output=platform/storage/storagemocks --name CourseRepository
+
 // Course is the data structure that represents a course.
 type Course struct {
 	id       string
@@ -16,11 +23,6 @@ func NewCourse(id, name, duration string) Course {
 		name:     name,
 		duration: duration,
 	}
-}
-
-// CourseRepository defines the expected behavior from a course storage.
-type CourseRepository interface {
-	Save(ctx context.Context, course Course) error
 }
 
 // ID returns the course unique identifier.
