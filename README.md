@@ -8,6 +8,7 @@
 - Mockery: https://github.com/vektra/mockery
 - Testify: https://pkg.go.dev/github.com/stretchr/testify
 - Testify mock - AssertExpectations: https://pkg.go.dev/github.com/stretchr/testify@v1.7.0/mock#Mock.AssertExpectations
+- go-sqlbuilder: https://github.com/huandu/go-sqlbuilder
 
 ## Commands used for create the project
 - Initialize go mod: `go mod init github.com/jorgechavezrnd/go-hexagonal_http_api`
