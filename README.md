@@ -11,6 +11,7 @@
 - go-sqlbuilder: https://github.com/huandu/go-sqlbuilder
 - go-sqlmock: https://github.com/DATA-DOG/go-sqlmock
 - faker: https://github.com/dmgk/faker
+- GoDDD: https://github.com/marcusolsson/goddd
 
 ## Commands used for create the project
 - Initialize go mod: `go mod init github.com/jorgechavezrnd/go-hexagonal_http_api`
