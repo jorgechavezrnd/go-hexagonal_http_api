@@ -23,6 +23,8 @@
 ## Commands for generate mocks
 - `cd internal`
 - Generate course_repository: `mockery --case=snake --outpkg=storagemocks --output=platform/storage/storagemocks --name CourseRepository`
+- `cd kit/command`
+- Generate command bus: `mockery --case=snake --outpkg=commandmocks --output=commandmocks --name=Bus`
 
 ## Command for run all tests
 - `go test ./...`
