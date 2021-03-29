@@ -12,6 +12,10 @@
 - go-sqlmock: https://github.com/DATA-DOG/go-sqlmock
 - faker: https://github.com/dmgk/faker
 - GoDDD: https://github.com/marcusolsson/goddd
+- context package: https://golang.org/pkg/context/
+- context article: https://blog.golang.org/context
+- context en go: https://blog.friendsofgo.tech/posts/context-en-golang/
+- patrones de concurrencia (context): https://blog.friendsofgo.tech/posts/patrones-de-concurrencia-context/
 
 ## Commands used for create the project
 - Initialize go mod: `go mod init github.com/jorgechavezrnd/go-hexagonal_http_api`
