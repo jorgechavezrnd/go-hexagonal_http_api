@@ -16,6 +16,8 @@
 - context article: https://blog.golang.org/context
 - context en go: https://blog.friendsofgo.tech/posts/context-en-golang/
 - patrones de concurrencia (context): https://blog.friendsofgo.tech/posts/patrones-de-concurrencia-context/
+- errgroup package: https://pkg.go.dev/golang.org/x/sync/errgroup
+- errgroup article: https://blog.friendsofgo.tech/posts/errgroup-agrupando-procesos
 
 ## Commands used for create the project
 - Initialize go mod: `go mod init github.com/jorgechavezrnd/go-hexagonal_http_api`
