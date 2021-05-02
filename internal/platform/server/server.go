@@ -12,6 +12,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jorgechavezrnd/go-hexagonal_http_api/internal/platform/server/handler/courses"
 	"github.com/jorgechavezrnd/go-hexagonal_http_api/internal/platform/server/handler/health"
+	"github.com/jorgechavezrnd/go-hexagonal_http_api/internal/platform/server/middleware/logging"
+	"github.com/jorgechavezrnd/go-hexagonal_http_api/internal/platform/server/middleware/recovery"
 	"github.com/jorgechavezrnd/go-hexagonal_http_api/kit/command"
 )
 
@@ -40,6 +42,8 @@ func New(ctx context.Context, host string, port uint, shudownTimeout time.Durati
 }
 
 func (s *Server) registerRoutes() {
+	s.engine.Use(recovery.Middleware(), logging.Middleware())
+
 	s.engine.GET("/health", health.CheckHandler())
 	s.engine.POST("/courses", courses.CreateHandler(s.commandBus))
 }
