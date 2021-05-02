@@ -32,6 +32,8 @@
 - Generate course_repository: `mockery --case=snake --outpkg=storagemocks --output=platform/storage/storagemocks --name CourseRepository`
 - `cd kit/command`
 - Generate command bus: `mockery --case=snake --outpkg=commandmocks --output=commandmocks --name=Bus`
+- `cd kit/event`
+- Generate event bus: `mockery --case=snake --outpkg=eventmocks --output=eventmocks --name=Bus`
 
 ## Command for run all tests
 - `go test ./...`
