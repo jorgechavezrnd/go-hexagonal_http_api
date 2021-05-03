@@ -28,6 +28,7 @@ func Test_CourseService_CreateCourse_RepositoryError(t *testing.T) {
 	err := courseService.CreateCourse(context.Background(), courseID, courseName, courseDuration)
 
 	courseRepositoryMock.AssertExpectations(t)
+	eventBusMock.AssertExpectations(t)
 	assert.Error(t, err)
 }
 
