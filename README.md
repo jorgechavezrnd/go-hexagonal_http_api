@@ -19,6 +19,8 @@
 - errgroup package: https://pkg.go.dev/golang.org/x/sync/errgroup
 - errgroup article: https://blog.friendsofgo.tech/posts/errgroup-agrupando-procesos
 - Patron cadena de responsabilidad: https://es.wikipedia.org/wiki/Cadena_de_responsabilidad
+- envconfig: https://pkg.go.dev/github.com/kelseyhightower/envconfig
+- The Twelve-Factor App: https://12factor.net/es/
 
 ## Commands used for create the project
 - Initialize go mod: `go mod init github.com/jorgechavezrnd/go-hexagonal_http_api`
