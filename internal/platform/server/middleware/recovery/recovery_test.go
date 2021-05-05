@@ -13,7 +13,8 @@ import (
 func TestRecoveryMiddleware(t *testing.T) {
 	// Setting up the Gin server
 	gin.SetMode(gin.TestMode)
-	engine := gin.Default()
+	engine := gin.New()
+	engine.Use(Middleware())
 	engine.GET("/test-middleware", func(context *gin.Context) {
 		panic("something unexpected")
 	})
