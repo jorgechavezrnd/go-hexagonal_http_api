@@ -36,7 +36,7 @@ func Run() error {
 
 	courseRepository := mysql.NewCourseRepository(db, cfg.DbTimeout)
 
-	creatingCourseService := creating.NewCourseSerivce(courseRepository, eventBus)
+	creatingCourseService := creating.NewCourseService(courseRepository, eventBus)
 	increasingCourseCounterService := increasing.NewCourseCounterService()
 
 	createCourseCommandHandler := creating.NewCourseCommandHandler(creatingCourseService)
