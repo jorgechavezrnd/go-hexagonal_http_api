@@ -23,7 +23,7 @@ func Test_CourseService_CreateCourse_RepositoryError(t *testing.T) {
 
 	eventBusMock := new(eventmocks.Bus)
 
-	courseService := NewCourseSerivce(courseRepositoryMock, eventBusMock)
+	courseService := NewCourseService(courseRepositoryMock, eventBusMock)
 
 	err := courseService.CreateCourse(context.Background(), courseID, courseName, courseDuration)
 
@@ -43,7 +43,7 @@ func Test_CourseService_CreateCourse_EventsBusError(t *testing.T) {
 	eventBusMock := new(eventmocks.Bus)
 	eventBusMock.On("Publish", mock.Anything, mock.AnythingOfType("[]event.Event")).Return(errors.New("something unexpected happened"))
 
-	courseService := NewCourseSerivce(courseRepositoryMock, eventBusMock)
+	courseService := NewCourseService(courseRepositoryMock, eventBusMock)
 
 	err := courseService.CreateCourse(context.Background(), courseID, courseName, courseDuration)
 
@@ -63,7 +63,7 @@ func Test_CourseServiceCreateCourse_Succeed(t *testing.T) {
 	eventBusMock := new(eventmocks.Bus)
 	eventBusMock.On("Publish", mock.Anything, mock.AnythingOfType("[]event.Event")).Return(nil)
 
-	courseService := NewCourseSerivce(courseRepositoryMock, eventBusMock)
+	courseService := NewCourseService(courseRepositoryMock, eventBusMock)
 
 	err := courseService.CreateCourse(context.Background(), courseID, courseName, courseDuration)
 

@@ -8,14 +8,14 @@ import (
 )
 
 // CourseService is the default CourseService interface
-// implementation returned by creating.NewCourseSerivce.
+// implementation returned by creating.NewCourseService.
 type CourseService struct {
 	courseRepository mooc.CourseRepository
 	eventBus         event.Bus
 }
 
 // NewCourseService returns the default Service interface implementation.
-func NewCourseSerivce(courseRepository mooc.CourseRepository, eventBus event.Bus) CourseService {
+func NewCourseService(courseRepository mooc.CourseRepository, eventBus event.Bus) CourseService {
 	return CourseService{
 		courseRepository: courseRepository,
 		eventBus:         eventBus,
