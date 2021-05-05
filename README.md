@@ -42,3 +42,20 @@
 
 ## Command for start HTTP API Server
 - `go run cmd/api/main.go`
+
+## Command for build docker image
+- `docker-compose build`
+
+## Command for start docker services
+- `docker-compose up -d`
+
+## Command for create course with curl
+- `curl -X POST http://localhost:8080/courses -H "Content-Type: application/json" -d "{\"id\":\"312840e1-c4fe-49e5-9e15-90dc9ae7d605\",\"name\":\"Go course\",\"duration\":\"8 weeks\"}"`
+
+## Commands for connect to mysql container
+- `docker-compose exec mysql sh`
+- `mysql -u codely -pcodely -D codely`
+- `SELECT * FROM courses;`
+
+## Command for show logs
+- `docker-compose logs mooc-api`
