@@ -24,6 +24,8 @@
 - Inject: https://pkg.go.dev/github.com/facebookgo/inject
 - Wire: https://pkg.go.dev/github.com/google/wire
 - Fx: https://pkg.go.dev/go.uber.org/fx
+- Gophercises: https://gophercises.com/
+- Wild workouts go ddd example: https://github.com/ThreeDotsLabs/wild-workouts-go-ddd-example
 
 ## Commands used for create the project
 - Initialize go mod: `go mod init github.com/jorgechavezrnd/go-hexagonal_http_api`
