@@ -117,6 +117,7 @@ func NewCourse(id, name, duration string) (Course, error) {
 		name:     nameVO,
 		duration: durationVO,
 	}
+	course.Record(NewCourseCreatedEvent(idVO.String(), nameVO.String(), durationVO.String()))
 	return course, nil
 }
 
