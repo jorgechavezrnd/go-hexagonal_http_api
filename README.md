@@ -21,6 +21,9 @@
 - Patron cadena de responsabilidad: https://es.wikipedia.org/wiki/Cadena_de_responsabilidad
 - envconfig: https://pkg.go.dev/github.com/kelseyhightower/envconfig
 - The Twelve-Factor App: https://12factor.net/es/
+- Inject: https://pkg.go.dev/github.com/facebookgo/inject
+- Wire: https://pkg.go.dev/github.com/google/wire
+- Fx: https://pkg.go.dev/go.uber.org/fx
 
 ## Commands used for create the project
 - Initialize go mod: `go mod init github.com/jorgechavezrnd/go-hexagonal_http_api`
