@@ -2,7 +2,6 @@ package inmemory
 
 import (
 	"context"
-	"log"
 
 	"github.com/jorgechavezrnd/go-hexagonal_http_api/kit/command"
 )
@@ -26,18 +25,7 @@ func (b *CommandBus) Dispatch(ctx context.Context, cmd command.Command) error {
 		return nil
 	}
 
-	// For Async Command Bus implementation:
-	go func() {
-		err := handler.Handle(ctx, cmd)
-		if err != nil {
-			log.Printf("Error while handling %s - %s\n", cmd.Type(), err)
-		}
-	}()
-
-	return nil
-
-	// For Sync Command Bus implementation:
-	// return handler.Handle(ctx, cmd)
+	return handler.Handle(ctx, cmd)
 }
 
 // Register implements the command.Bus interface.
